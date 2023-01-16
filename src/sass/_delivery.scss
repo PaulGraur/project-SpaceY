@@ -1,0 +1,18 @@
+.delivery-list {
+    list-style: none;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #000000;
+}
+
+.section-delivery__image {
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    width: 100vw;
+}
