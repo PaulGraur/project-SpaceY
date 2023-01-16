@@ -1,0 +1,29 @@
+a {
+    text-decoration: none;    
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ button {
+    border: none;
+    padding: 0;
+ }
+
+ .container {
+    @include for-size(phone) {
+        max-width: 480px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    @include for-size(tablet) {
+        max-width: 768px;
+    }
+    
+    @include for-size(desktop) {
+        max-width: 1200px;
+    }
+ }

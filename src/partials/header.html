@@ -1,0 +1,138 @@
+<header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <svg class="logo__svg" fill="black">
+          <use href="./images/icons.svg#logo"></use>
+        </svg>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li><a class="header__nav__ref" href="#hero">Anemone</a></li>
+
+          <li><a class="header__nav__ref" href="#about">About us</a></li>
+
+          <li><a class="header__nav__ref" href="#store">Store</a></li>
+
+          <li><a class="header__nav__ref" href="#delivery">Delivery</a></li>
+
+          <li><a class="header__nav__ref" href="#blog">Blog</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="contact" data-modal-open>
+        <svg class="contact__svg">
+          <use href="./images/icons.svg#phone"></use>
+        </svg>
+      </button>
+
+      <button type="button" class="menu-opener" mobile-menu-open>
+        <svg class="menu-opener__svg">
+          <use href="./images/icons.svg#burger"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu faded" mobile-menu>
+      <button type="button" class="mobile-menu__closer" mobile-menu-close>
+        <svg class="mobile-menu__svg">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__nav__list">
+          <li class="mobile-menu__nav__item">
+            <a href="#hero" class="mobile-menu__nav__ref">Anemone</a>
+          </li>
+
+          <li class="mobile-menu__nav__item">
+            <a href="#about" class="mobile-menu__nav__ref">About us</a>
+          </li>
+
+          <li class="mobile-menu__nav__item">
+            <a href="#store" class="mobile-menu__nav__ref">Store</a>
+          </li>
+
+          <li class="mobile-menu__nav__item">
+            <a href="#delivery" class="mobile-menu__nav__ref">Delivery</a>
+          </li>
+
+          <li class="mobile-menu__nav__item">
+            <a href="#blog" class="mobile-menu__nav__ref">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="backdrop is-closed" data-modal>
+    <div class="modal-field">
+      <button type="button" class="modal-close" data-modal-close>
+        <svg class="modal-field__svg">
+          <use href="./images/icons.svg#modal-close"></use>
+        </svg>
+      </button>
+
+      <h2 class="modal-field__caption">Contact us</h2>
+
+      <p class="modal-field__content">
+        If you have any additional questions or you want to clarify something
+        before you make an order please fill in your contact details. We will
+        call you back.
+      </p>
+
+      <form action="" class="">
+        <ladel class="name-label">
+          <span class="name-label__title">Name</span>
+          <input
+            name="username"
+            class="name-label__input"
+            type="text"
+            placeholder="Your name"
+            required
+            pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+            title="Username must be two words separated by space."
+          />
+        </ladel>
+
+        <ladel class="mail-label">
+          <span class="mail-label__title">Email</span>
+          <input
+            name="e-mail"
+            class="mail-label__input"
+            type="text"
+            placeholder="Your e-mail"
+            required
+            pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+            title="Email must follow abcdef@abcde.com"
+          />
+        </ladel>
+
+        <button type="submit" class="modal-field__button">Send</button>
+      </form>
+    </div>
+
+    <div class="modal-sucsess hidden">
+      <button type="button" class="modal-close">
+        <svg class="modal-field__svg">
+          <use href="./images/icons.svg#modal-close"></use>
+        </svg>
+      </button>
+
+      <img
+        src="./images/backlog.svg"
+        alt="flowers background"
+        class="modal-sucsess__background"
+      />
+
+      <h2 class="modal-sucsess__caption">Thank you!</h2>
+
+      <p class="modal-sucsess__content">
+        We have received your contact details and will reach you soon.
+      </p>
+
+      <button type="submit" class="modal-sucsess__button">Continue</button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
