@@ -1,0 +1,21 @@
+.section {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container {
+    max-width: 288px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.delivery-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    & li {
+        list-style-type: none;
+    }
+}
