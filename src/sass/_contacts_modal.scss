@@ -9,7 +9,7 @@
     transition: opacity 300ms linear;
     z-index: 10;
 
-    &.is-closed {
+    &.is-hidden {
         opacity: 0;
         pointer-events: none;
     }
@@ -19,7 +19,7 @@
 
 
 
-.modal-field {     
+.modal-wrapper {     
 
     position: absolute;
     top: 50%;
@@ -114,7 +114,7 @@
 
 }
 
-.modal-sucsess {
+.modal-gratitude {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -222,7 +222,7 @@
     }
 }
 
-.hidden {
+.visually-hidden {
     display: none;
 }
 
@@ -334,6 +334,44 @@
     }    
 }
 
+.spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+  
+    & .path {
+      stroke: #e86f54;
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
+
 .mail-label__input {
 
     &:invalid{
@@ -342,9 +380,9 @@
 
 }
 
-.modal-field:focus-within {
+.modal-wrapper:focus-within {
 
-    .modal-field__button{
+    .modal-wrapper__button{
         background-color: $main-theme-color;
     }
 
