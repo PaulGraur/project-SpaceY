@@ -1,77 +1,163 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+// body {
+//   margin: 0;
+//   padding: 0;
+// }
 
-ul,
-ol {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
+// ul,
+// ol {
+//   padding: 0;
+//   margin: 0;
+//   list-style-type: none;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-a {
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// li,
+// a {
+//   text-decoration: none;
+//   margin: 0;
+//   padding: 0;
+//   cursor: pointer;
+// }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-
-    text-align: center;
-
-    margin: 0 auto;
-    width: 100%;
+  @media screen and (min-width: 768px) {
+    padding-top: 38px;
+    padding-bottom: 194px;
   }
 
-  &__paragraph {
-    font-size: 14px;
+  @media screen and (min-width: 1280px) {
+    padding-top: 64px;
+    padding-bottom: 193px;
+  }
+  
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    @media screen and (max-width: 767.98px) {
+      justify-content: center;
+    }
+  
+    @media screen and (min-width: 1280px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__header {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 148px;
+    bottom: 0;
+    transform: translate(-50%, 41%);
     font-weight: 400;
+    font-size: 52px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  
+    @media screen and (min-width: 768px) {
+      font-size: 120px;
+      transform: translate(-50%, 45%);
+      top: 400px;
+    }
+  
+    @media screen and (min-width: 1280px) {
+      font-size: 160px;
+      transform: translate(-50%, 42%);
+  
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 58px;
+        height: 8px;
+        background-color: #0e0e0e;
+      }
+    }
+  }
+
+  &__sub__header {
+    margin-right: 15px;
+    margin-left: 12px;
     width: 46px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+  
     @media screen and (min-width: 768px) {
       width: 76px;
+      margin-right: 40px;
+      margin-left: 49px;
       font-size: 24px;
     }
-    @media screen and (min-width: 1200px) {
+  
+    @media screen and (min-width: 1280px) {
       width: 101px;
+      margin-left: 210px;
+      margin-right: 0px;
       font-size: 32px;
     }
   }
 
-  &__button {
-    border: 0;
-    padding: 0;
-    background-color: transparent;
-    color: inherit;
-    cursor: pointer;
+  &__image {
+    width: 145px;
+    height: 274px;
+    object-fit: cover;
+    object-position: center;
+  
+    @media screen and (min-width: 768px) {
+      width: 390px;
+      height: 636px;
+    }
   }
 
-  &__header {
-    text-align: center;
-    font-weight: 400;
-    font-size: 52px;
+  &__picture {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__btn {
+    background-color: inherit;
+    text-decoration: none;
+    border: none;
+  }
+
+  &__svg {
+    margin-left: 8px;
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    width: 64px;
+    height: 76px;
+    left: 224px;
+  
+    background-image: url(../svg/symbol-defs.svg#hero-btn-mobile);
+  
     @media screen and (min-width: 768px) {
-      font-size: 120px;
+      margin-left: 20px;
+      width: 145px;
+      height: 150px;
+  
+      background-image: url(../svg/symbol-defs.svg#hero-btn-tablet);
     }
-    @media screen and (min-width: 1200px) {
-      font-size: 160px;
+  
+    @media screen and (min-width: 1280px) {
+      margin-right: 145px;
+      margin-left: 0px;
+      width: 166px;
+      height: 166px;
+  
+      background-image: url(../svg/symbol-defs.svg#hero-btn-mobile);
     }
   }
 }
