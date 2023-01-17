@@ -1,0 +1,150 @@
+.header {    
+    overflow-x: hidden;
+    &--positioning {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 16px; 
+        padding-bottom:44px;       
+        padding-left: 16px;
+        padding-right: 16px;
+        
+        @include for-size(tablet) {            
+            padding-top: 24px;
+            padding-bottom: 38px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        @include for-size(desktop) {
+             max-width: 1280px;
+            padding-top: 28px;
+            padding-bottom: 64px;
+        }
+    }
+}
+
+.logo {    
+
+    &__svg {
+        width: 45px;
+        height: 35px;
+        fill: $icon-black;        
+}
+}
+
+.contact{
+    background-color: transparent;
+    margin-left: auto;
+    display: inline-block;
+    cursor: pointer;
+
+    &__svg {
+    width: 20px;
+    height: 20px;   
+    fill: $icon-black;
+    }
+    border: none;
+}
+
+.menu-opener {
+    background-color: transparent;
+    margin-left: 17px;
+
+    @include for-size(tablet) {
+        display: none;
+    }
+
+    &__svg {
+    width: 18px;
+    height: 16px;
+    fill: $icon-black;
+    }
+    border: none;
+} 
+
+.header-nav {
+    display: none;
+
+    @include for-size(tablet) {
+        display: inline-block;        
+    }
+
+    &__list {
+        display: flex;
+        gap: 24px;
+        margin-left: 80px;
+
+        @include for-size(desktop) {
+            gap: 48px;
+            margin-left: 261px;
+        }
+    }
+
+    &__ref {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.2em;
+        color: $main-font-color; 
+    }
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(0);
+    background-color: $main-theme-color;
+    width: 100%;
+    height: 100%;
+    padding-top: 124px;
+    padding-right: 110px;
+    padding-left: 110px;
+    padding-bottom: 180px;
+    transition: transform 300ms linear;
+    z-index: 10;
+    
+
+    @include for-size(tablet) {
+        display: none;
+    }
+
+    &.faded {
+        transform: translateX(101%);
+    }
+
+    &__closer{
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+    }
+
+    &__svg{
+        width: 12px;
+        height: 12px;
+        display: block;       
+        fill: $main-white; 
+              
+    }
+
+    &__nav{  
+        
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+            align-items: center;
+        }
+
+        &-ref {
+            font-size: 20px;
+            line-height: 1.2em;
+            color: $main-white;
+        }       
+    }
+}

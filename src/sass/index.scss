@@ -1,11 +1,21 @@
 // Utils
+@import './utils/fonts';
+@import './utils/mixin';
 @import './utils/reset';
 @import './utils/variables';
+@import './utils/container';
+@import './utils/mixin';
+@import './utils/button';
+@import './utils/colors';
+
+
+
 
 
 
 // Components
 @import './header';
+@import './contacts_modal';
 @import './hero';
 @import './about';
 @import './store';
