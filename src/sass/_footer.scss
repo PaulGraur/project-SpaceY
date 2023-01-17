@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a {
+  text-decoration: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+.footer--title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.basic--text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.logo {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.footer {
+  background-color: #000000;
+}
+
+.container {
+  padding: 32px 16px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 767.98px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 44px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    gap: 44px;
+    padding: 60px 24px;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    padding: 64px 72px;
+  }
+}
+
+.container--basic {
+  @media screen and (max-width: 767.98px) {
+    flex-basis: calc((100% - 44px) / 2);
+  }
+}
+
+.navigation {
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__item {
+    margin-bottom: 12px;
+    &__item:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.timetable {
+  &__title {
+    margin-bottom: 18px;
+  }
+  &__article {
+    width: 85px;
+    height: 34px;
+  }
+}
+
+.contacts {
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__item {
+    margin-bottom: 12px;
+  }
+
+  &__link--replace {
+    @media screen and (max-width: 767.98px) {
+      display: block;
+    }
+  }
+}
+
+.picture {
+  gap: 24px;
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
+}
