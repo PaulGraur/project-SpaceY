@@ -1,27 +1,27 @@
-.header {
-    height: 35px;
+.header {    
     overflow-x: hidden;
-
-    @include for-size(tablet) {
-        height: 57px;
-    }
-
-    .container {
-        max-width: 100%;
+    &--positioning {
+        width: 100%;
         display: flex;
         align-items: center;
         margin-right: auto;
-        margin-left: auto;        
+        margin-left: auto;
+        padding-top: 16px; 
+        padding-bottom:44px;       
         padding-left: 16px;
         padding-right: 16px;
-        padding: 0;
         
-        @include for-size(tablet) {
-            max-width: 100%;
+        @include for-size(tablet) {            
+            padding-top: 24px;
+            padding-bottom: 38px;
+            padding-left: 24px;
+            padding-right: 24px;
         }
 
         @include for-size(desktop) {
-            max-width: 1200px;
+             max-width: 1280px;
+            padding-top: 28px;
+            padding-bottom: 64px;
         }
     }
 }
@@ -65,7 +65,7 @@
     border: none;
 } 
 
-.header__nav {
+.header-nav {
     display: none;
 
     @include for-size(tablet) {
@@ -133,14 +133,14 @@
 
     &__nav{  
         
-        &__list {
+        &-list {
             display: flex;
             flex-direction: column;
             gap: 26px;
             align-items: center;
         }
 
-        &__ref {
+        &-ref {
             font-size: 20px;
             line-height: 1.2em;
             color: $main-white;

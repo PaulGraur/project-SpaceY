@@ -93,7 +93,7 @@
 
     &__button {
         
-        background-color: $main-theme-color-unfocused;
+        background-color: $main-theme-color;
         width:100%;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -109,6 +109,10 @@
             font-size: 18px;;
             padding-top: 14px;
             padding-bottom: 14px;
+        }
+
+        &:disabled {
+            background-color: $main-theme-color-unfocused;
         }
     }
 
@@ -372,7 +376,8 @@
     }
   }
 
-.mail-label__input {
+.mail-label__input,
+.name-label__input .disabled {
 
     &:invalid{
         border-color: red;
@@ -380,10 +385,3 @@
 
 }
 
-.modal-wrapper:focus-within {
-
-    .modal-wrapper__button{
-        background-color: $main-theme-color;
-    }
-
-}

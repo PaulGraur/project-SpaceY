@@ -1,22 +1,22 @@
 <header class="header">
-    <div class="container">
+    <div class="container header--positioning">
       <a href="#" class="logo">
         <svg class="logo__svg" fill="black">
           <use href="./images/icons.svg#logo"></use>
         </svg>
       </a>
 
-      <nav class="header__nav">
-        <ul class="header__nav__list">
-          <li><a class="header__nav__ref" href="#hero">Anemone</a></li>
+      <nav class="header-nav">
+        <ul class="header-nav__list">
+          <li><a class="header-nav__ref" href="#hero">Anemone</a></li>
 
-          <li><a class="header__nav__ref" href="#about">About us</a></li>
+          <li><a class="header-nav__ref" href="#about">About us</a></li>
 
-          <li><a class="header__nav__ref" href="#store">Store</a></li>
+          <li><a class="header-nav__ref" href="#store">Store</a></li>
 
-          <li><a class="header__nav__ref" href="#delivery">Delivery</a></li>
+          <li><a class="header-nav__ref" href="#delivery">Delivery</a></li>
 
-          <li><a class="header__nav__ref" href="#blog">Blog</a></li>
+          <li><a class="header-nav__ref" href="#blog">Blog</a></li>
         </ul>
       </nav>
 
@@ -41,25 +41,25 @@
       </button>
 
       <nav class="mobile-menu__nav">
-        <ul class="mobile-menu__nav__list">
-          <li class="mobile-menu__nav__item">
-            <a href="#hero" class="mobile-menu__nav__ref">Anemone</a>
+        <ul class="mobile-menu__nav-list">
+          <li class="mobile-menu__nav-item">
+            <a href="#hero" class="mobile-menu__nav-ref">Anemone</a>
           </li>
 
-          <li class="mobile-menu__nav__item">
-            <a href="#about" class="mobile-menu__nav__ref">About us</a>
+          <li class="mobile-menu__nav-item">
+            <a href="#about" class="mobile-menu__nav-ref">About us</a>
           </li>
 
-          <li class="mobile-menu__nav__item">
-            <a href="#store" class="mobile-menu__nav__ref">Store</a>
+          <li class="mobile-menu__nav-item">
+            <a href="#store" class="mobile-menu__nav-ref">Store</a>
           </li>
 
-          <li class="mobile-menu__nav__item">
-            <a href="#delivery" class="mobile-menu__nav__ref">Delivery</a>
+          <li class="mobile-menu__nav-item">
+            <a href="#delivery" class="mobile-menu__nav-ref">Delivery</a>
           </li>
 
-          <li class="mobile-menu__nav__item">
-            <a href="#blog" class="mobile-menu__nav__ref">Blog</a>
+          <li class="mobile-menu__nav-item">
+            <a href="#blog" class="mobile-menu__nav-ref">Blog</a>
           </li>
         </ul>
       </nav>
@@ -84,10 +84,10 @@
 
       <form action="" class="">
         <ladel class="name-label">
-          <span class="name-label__title">Name</span>
+          <span class="name-label__title disabled">Name</span>
           <input
             name="username"
-            class="name-label__input"
+            class="name-label__input contact-form-field disabled"
             type="text"
             placeholder="Your name"
             required
@@ -100,7 +100,7 @@
           <span class="mail-label__title">Email</span>
           <input
             name="e-mail"
-            class="mail-label__input"
+            class="mail-label__input contact-form-field"
             type="text"
             placeholder="Your e-mail"
             required
@@ -109,7 +109,7 @@
           />
         </ladel>
 
-        <button type="submit" class="modal-wrapper__button" data-action="send">Send</button>
+        <button type="submit" class="modal-wrapper__button modal-btn" data-action="send" disabled>Send</button>
       </form>
     </div>
 
@@ -145,4 +145,5 @@
       ></circle>
     </svg>
   </div>
-  <script src="./js/modal.js"></script>
+
+  
