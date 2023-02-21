@@ -46,27 +46,28 @@
 
 .footer {
   background-color: #000000;
+
+  @media screen and (min-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 64px 72px;
+  }
 }
 
 .container__footer {
-  padding: 32px 16px;
-  margin: 0 auto;
-
   @media screen and (max-width: 767.98px) {
     display: flex;
     flex-wrap: wrap;
-    max-width: 480px;
   }
 
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    padding: 60px 24px;
-    max-width: 768px;
   }
-  
+
   @media screen and (min-width: 1280px) {
-    padding: 64px 72px;
     max-width: 1280px;
   }
 }
@@ -74,6 +75,9 @@
 .container--basic {
   @media screen and (max-width: 767.98px) {
     flex-basis: calc((100% - 44px) / 2);
+  }
+  @media screen and (max-width: 1200px) {
+    gap: 40px;
   }
 }
 
